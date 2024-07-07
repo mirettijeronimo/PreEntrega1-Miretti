@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ body{
+    background: url("./imagenes/mario-fondo.jpg")  no-repeat;
+    background-size: 100%;
+   
+ }
+ .bodyDos {
+  background: url("./imagenes/mario-fondo-2.jpg") no-repeat;
+  background-size: 100%;
+ }
+
+ h1{
+    font-size: 90px;
+    font-weight: 600;
+    font-family: 'Niconne', cursive;
+    color: #e0d6e9;
+    text-shadow: 2px 2px 0px  #957dad,
+                 4px 4px 0px #ee4b2b,
+                 6px 6px 0px #00c2cb,
+                 8px 8px 0px #ff7f50,
+                 10px 10px 0px #553c9a;
+    text-align: center;
+    
+  }
+ 
+ button{
+   position: absolute;
+   left: calc(50% - 118px);
+   top: 270px;
+   display: block;
+   margin-top: 145px;
+   padding: 15px;
+   width: 229px;
+   height: 48px;
+   /*Sombra*/
+   box-shadow: 0px 4px 8px black;
+   border: none;
+   border-radius: 5px;
+   font-size: 1.4rem;
+   font-weight: bold;
+   text-decoration: none;
+ }
+
+ a{
+  position: absolute;
+   left: calc(50% - 118px);
+   top: 270px;
+   display: block;
+   margin-top: 145px;
+   padding: 15px;
+   width: 229px;
+   height: 48px;
+   /*Sombra*/
+   box-shadow: 0px 4px 8px black;
+   border: none;
+   border-radius: 5px;
+   font-size: 1.4rem;
+   font-weight: bold;
+   text-decoration: none;
+   background-color: beige;
+ }
+
+ a p{
+  color: black;
+  text-align: center;
+ }
