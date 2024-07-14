@@ -1,71 +1,71 @@
+/* Reset general */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
- /*INDEX*/ 
- body{
-    background: url("./imagenes/mario-fondo.jpg")  no-repeat;
-    background-size: 100%;
-   
- }
- .botonInicio{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+}
+
+/* Página principal (INDEX) */
+.bodyUno {
+  background: url("./imagenes/mario-fondo.jpg") no-repeat;
+  background-size: cover;
+}
+
+.botonInicio {
   color: black;
   text-align: center;
- }
- a{
-  position: absolute;
-   left: calc(50% - 118px);
-   top: 270px;
-   display: block;
-   margin-top: 145px;
-   padding: 15px;
-   width: 229px;
-   height: 48px;
-   /*Sombra*/
-   box-shadow: 0px 4px 8px black;
-   border: none;
-   border-radius: 5px;
-   font-size: 1.4rem;
-   font-weight: bold;
-   text-decoration: none;
-   background-color: white;
- }
- .botonParaDespuesFalopaMia{
-  position: absolute;
-   left: calc(50% - 118px);
-   top: 270px;
-   display: block;
-   margin-top: 200px;
-   padding: 15px;
-   width: 229px;
-   height: 48px;
-   /*Sombra*/
-   box-shadow: 0px 4px 8px black;
-   border: none;
-   border-radius: 5px;
-   font-size: 1.4rem;
-   font-weight: bold;
-   text-decoration: none;
-   background-color: white;
 }
-.botonParaDespuesFalopaMia P{
+
+a,
+.botonParaDespuesFalopaMia {
+  position: absolute;
+  left: 50%;
+  display: block;
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  box-shadow: 0px 4px 8px black;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: white;
+  transform: translateX(-50%);
+}
+
+a {
+  top: 270px;
+  margin-top: 145px;
+}
+
+.botonParaDespuesFalopaMia {
+  top: 270px;
+  margin-top: 200px;
+}
+
+.botonParaDespuesFalopaMia p {
   color: black;
   text-align: center;
   font-size: 20px;
 }
 
-/*PAGES UNO*/
- .bodyDos {
+/* Página del juego (PAGES UNO) */
+.bodyDos {
   background: url("./imagenes/mario-fondo-2.jpg") no-repeat;
-  background-size: 100%;
- }
-#puntosActuales{
+  background-size: cover;
+}
+
+#puntosActuales,
+#resultadoFinal {
   position: absolute;
-  left: calc(50% - 110px);
-  top: 270px;
+  left: 50%;
   display: block;
-  margin-top: 550px;
   padding: 15px;
   width: 229px;
   height: 48px;
@@ -74,218 +74,206 @@
   border-radius: 5px;
   font-size: 1.4rem;
   font-weight: bold;
-  text-decoration: none;
+  text-align: center;
   background-color: white;
+  transform: translateX(-50%);
 }
+
+#puntosActuales {
+  top: 270px;
+  margin-top: 550px;
+}
+
 #vidasRestantes {
+  position: absolute;
+  left: 50%;
+  top: 270px;
+  display: block;
+  margin-top: 450px;
   width: 100px;
   aspect-ratio: 1;
   background: linear-gradient(#dc1818 0 0) bottom/100% 0% no-repeat #ccc;
-  -webkit-mask: 
-    radial-gradient(circle at 60% 65%, #000 62%, #0000 65%) top left, 
-    radial-gradient(circle at 40% 65%, #000 62%, #0000 65%) top right, 
-    linear-gradient(to bottom left, #000 42%,#0000 43%) bottom left , 
-    linear-gradient(to bottom right,#000 42%,#0000 43%) bottom right;
+  -webkit-mask: radial-gradient(circle at 60% 65%, #000 62%, #0000 65%) top left,
+    radial-gradient(circle at 40% 65%, #000 62%, #0000 65%) top right,
+    linear-gradient(to bottom left, #000 42%, #0000 43%) bottom left,
+    linear-gradient(to bottom right, #000 42%, #0000 43%) bottom right;
   -webkit-mask-size: 50% 50%;
   -webkit-mask-repeat: no-repeat;
   animation: l19 2s infinite linear;
   text-align: center;
   padding-top: 20px;
-  position: absolute;
-  left: calc(50% - 50px);
-  top: 270px;
-  display: block;
-  margin-top: 450px;
-}
-@keyframes l19 {
-    90%,100% {background-size:100% 100%}
 }
 
-#resultadoFinal{
+@keyframes l19 {
+  90%,
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+#resultadoFinal {
+  top: 270px;
+  margin-top: 600px;
+}
+
+h1 {
+  font-size: 90px;
+  font-weight: 600;
+  font-family: 'Niconne', cursive;
+  color: #e0d6e9;
+  text-shadow: 2px 2px 0px #957dad,
+               4px 4px 0px #ee4b2b,
+               6px 6px 0px #00c2cb,
+               8px 8px 0px #ff7f50,
+               10px 10px 0px #553c9a;
+  text-align: center;
+}
+
+button {
   position: absolute;
-  left: calc(50% - 110px);
+  left: 50%;
   top: 270px;
   display: block;
-  margin-top: 600px;
   padding: 15px;
   width: 229px;
   height: 48px;
-  text-align: center;
   box-shadow: 0px 4px 8px black;
   border: none;
   border-radius: 5px;
   font-size: 1.4rem;
   font-weight: bold;
   text-decoration: none;
-  background-color: white;
-  font-size: 15px;
+  transform: translateX(-50%);
 }
 
- h1{
-    font-size: 90px;
-    font-weight: 600;
-    font-family: 'Niconne', cursive;
-    color: #e0d6e9;
-    text-shadow: 2px 2px 0px  #957dad,
-                 4px 4px 0px #ee4b2b,
-                 6px 6px 0px #00c2cb,
-                 8px 8px 0px #ff7f50,
-                 10px 10px 0px #553c9a;
-    text-align: center;
-    
-  }
- 
- button{
-   position: absolute;
-   left: calc(50% - 118px);
-   top: 270px;
-   display: block;
-   margin-top: 10px;
-   padding: 15px;
-   width: 229px;
-   height: 48px;
-   /*Sombra*/
-   box-shadow: 0px 4px 8px black;
-   border: none;
-   border-radius: 5px;
-   font-size: 1.4rem;
-   font-weight: bold;
-   text-decoration: none;
- }
-/*PAGES DOS*/
-
-#bodyPages2{
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
-    background: hsl(0 0% 0%);
-    gap: 2rem;
+/* Página del acertijo (PAGES DOS) */
+#bodyAcertijo {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: hsl(0 0% 0%);
+  gap: 2rem;
 }
-#bodyPages2::before{
+
+#bodyAcertijo::before {
   --line: hsl(0 0% 95% / 0.25);
   content: "";
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background:
-    linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
-    linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+  background: linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
+              linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
   mask: linear-gradient(-15deg, transparent 30%, white);
   top: 0;
   z-index: -1;
 }
- #section{
-    display: grid;
-    gap: 4rem;
-    align-items: center;
-    justify-content: center;
- }
-  
- #section p {
-    margin: 0;
-    font-size: 2.25rem;
-    color: hsl(0 0% 40%);
-    text-align: center;
-    background: linear-gradient(hsl(0 0% 80%), hsl(0 0% 50%));
-    color: transparent;
-    background-clip: text;
-  }
-  
-  .code {
-    font-size: 3rem;
-    display: flex;
-    flex-wrap: nowrap;
-    color: hsl(0 0% 100%);
-    border-radius: 1rem;
-    background: hsl(0 0% 6%);
-    justify-content: center;
-    box-shadow: 0 1px hsl(0 0% 100% / 0.25) inset;
-  }
-  
-  .code:hover {
-    cursor: grab;
-  }
-  
-  .digit {
-    display: flex;
-    height: 100%;
-    padding: 5.5rem 1rem;
-  }
-  
-  .digit:focus-visible {
-    outline-color: hsl(0 0% 50% / 0.25);
-    outline-offset: 1rem;
-  }
-  
-  .digit span {
-    scale: calc(var(--active, 0) + 0.5);
-    filter: blur(calc((1 - var(--active, 0)) * 1rem));
-    transition: scale calc(((1 - var(--active, 0)) + 0.2) * 1s), filter calc(((1 - var(--active, 0)) + 0.2) * 1s);
-  }
-  
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .digit:first-of-type {
-    padding-left: 5rem;
-  }
-  .digit:last-of-type {
-    padding-right: 5rem;
-  }
-  
-  :root {
-    --lerp-0: 1; /* === sin(90deg) */
-    --lerp-1: calc(sin(50deg));
-    --lerp-2: calc(sin(45deg));
-    --lerp-3: calc(sin(35deg));
-    --lerp-4: calc(sin(25deg));
-    --lerp-5: calc(sin(15deg));
-  }
-  
-  .digit:is(:hover, :focus-visible) {
-    --active: var(--lerp-0);
-  }
-  .digit:is(:hover, :focus-visible) + .digit,
-  .digit:has(+ .digit:is(:hover, :focus-visible)) {
-    --active: var(--lerp-1);
-  }
-  .digit:is(:hover, :focus-visible) + .digit + .digit,
-  .digit:has(+ .digit + .digit:is(:hover, :focus-visible)) {
-    --active: var(--lerp-2);
-  }
-  .digit:is(:hover, :focus-visible) + .digit + .digit + .digit,
-  .digit:has(+ .digit + .digit + .digit:is(:hover, :focus-visible)) {
-    --active: var(--lerp-3);
-  }
-  .digit:is(:hover, :focus-visible) + .digit + .digit + .digit + .digit,
-  .digit:has(+ .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
-    --active: var(--lerp-4);
-  }
-  .digit:is(:hover, :focus-visible) + .digit + .digit + .digit + .digit + .digit,
-  .digit:has(+ .digit + .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
-    --active: var(--lerp-5);
-  }
 
-  #btnPrincipalDos{
-    position: absolute;
-    left: calc(50% - 118px);
-    top: 750px;
-    display: block;
-    margin-top: 10px;
-    padding: 15px;
-    width: 229px;
-    height: 48px;
-    /*Sombra*/
-    box-shadow: 0px 4px 8px black;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: none;
-  }
+#section {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#section p {
+  font-size: 2.25rem;
+  text-align: center;
+  background: linear-gradient(hsl(0 0% 80%), hsl(0 0% 50%));
+  color: transparent;
+  background-clip: text;
+}
+
+.code {
+  font-size: 3rem;
+  display: flex;
+  flex-wrap: nowrap;
+  color: hsl(0 0% 100%);
+  border-radius: 1rem;
+  background: hsl(0 0% 6%);
+  justify-content: center;
+  box-shadow: 0 1px hsl(0 0% 100% / 0.25) inset;
+}
+
+.code:hover {
+  cursor: grab;
+}
+
+.digit {
+  display: flex;
+  height: 100%;
+  padding: 5.5rem 1rem;
+}
+
+.digit:focus-visible {
+  outline-color: hsl(0 0% 50% / 0.25);
+  outline-offset: 1rem;
+}
+
+.digit span {
+  scale: calc(var(--active, 0) + 0.5);
+  filter: blur(calc((1 - var(--active, 0)) * 1rem));
+  transition: scale calc(((1 - var(--active, 0)) + 0.2) * 1s), filter calc(((1 - var(--active, 0)) + 0.2) * 1s);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.digit:first-of-type {
+  padding-left: 5rem;
+}
+
+.digit:last-of-type {
+  padding-right: 5rem;
+}
+
+:root {
+  --lerp-0: 1;
+  --lerp-1: calc(sin(50deg));
+  --lerp-2: calc(sin(45deg));
+  --lerp-3: calc(sin(35deg));
+  --lerp-4: calc(sin(25deg));
+  --lerp-5: calc(sin(15deg));
+}
+
+.digit:is(:hover, :focus-visible) {
+  --active: var(--lerp-0);
+}
+
+.digit:is(:hover, :focus-visible) + .digit,
+.digit:has(+ .digit:is(:hover, :focus-visible)) {
+  --active: var(--lerp-1);
+}
+
+.digit:is(:hover, :focus-visible) + .digit + .digit,
+.digit:has(+ .digit + .digit:is(:hover, :focus-visible)) {
+  --active: var(--lerp-2);
+}
+
+.digit:is(:hover, :focus-visible) + .digit + .digit + .digit,
+.digit:has(+ .digit + .digit + .digit:is(:hover, :focus-visible)) {
+  --active: var(--lerp-3);
+}
+
+.digit:is(:hover, :focus-visible) + .digit + .digit + .digit + .digit,
+.digit:has(+ .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
+  --active: var(--lerp-4);
+}
+
+.digit:is(:hover, :focus-visible) + .digit + .digit + .digit + .digit + .digit,
+.digit:has(+ .digit + .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
+  --active: var(--lerp-5);
+}
+
+input label {
+  text-align: center;
+  margin: 0.4rem 0;
+  box-shadow: 9px 188px 300px -81px rgba(0, 0, 0, 1);
+  border-radius: 196px;
+}
+
+
  
 
  

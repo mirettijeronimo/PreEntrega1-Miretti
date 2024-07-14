@@ -90,6 +90,8 @@ function mostrarOpcionesDos() {
     const ejerciciosOrdenadosDos = resultadosDos.map(resultado => resultado.opcionesDos + ") " + resultado.resultadoDos);
     alert("El mínimo común múltiplo de 20 y 30 es...\n" + ejerciciosOrdenadosDos.join("\n"));
     elegirOpcionCorrecta("Ingrese la respuesta correcta (A, B, C, D)", "A");
+    mostrarResultadosFinales();
+    mostrarAcertijo();
 }
 
 function mostrarResultadosFinales() {
@@ -104,13 +106,16 @@ function iniciarJuego() {
     mostrar();
     mostrarDos();
     mostrarOpciones();
-    mostrarResultadosFinales();
 }
 
-let boton = document.getElementById("btnPrincipal");
-boton.addEventListener("click", function() {
+function mostrarAcertijo() {
+    window.location.href = "acertijo.html";
+}
+
+document.getElementById("btnPrincipal").addEventListener("click", function() {
     iniciarJuego();
 });
+
 
 
 //tabla de puntos localstorage setItem / getItem 
