@@ -1,14 +1,15 @@
 let puntos = 0;
 let vidas = 3;
+let nombre = '';
 
-function introduccion() {
-    alert("Hola, esta es una aventura de Mario donde resolverás ejercicios matemáticos para ayudarlo a rescatar a la princesa.");
-}
 
 function solicitarNombre() {
-    let nombre = prompt("Ingrese su nombre para empezar la aventura");
+    nombre = prompt("Ingrese su nombre para empezar la aventura");
     alert("¡Hola " + nombre + "! Bienvenido a la aventura.");
 }
+
+function mostrarMensajeBienvenida() {
+    document.getElementById('mensajeBienvenida').innerHTML = ``;}
 
 function mostrar() {
     alert("¡Felicitaciones! Has pasado el primer nivel.");
@@ -97,15 +98,37 @@ function mostrarOpcionesDos() {
 function mostrarResultadosFinales() {
     document.getElementById('resultadoFinal').innerText = 'Puntuación final: ' + puntos + ', Vidas restantes: ' + vidas;
 }
+// Guardar el nombre del jugador
+function guardarNombreJugador(nombre) {
+    localStorage.setItem('nombreJugador', nombre);
+}
+
+// Guardar el número de vidas restantes
+function guardarVidasRestantes(vidas) {
+    localStorage.setItem('vidasRestantes', vidas);
+}
+
+// Obtener el nombre del jugador
+function obtenerNombreJugador() {
+    return localStorage.getItem('nombreJugador');
+}
+
+// Obtener el número de vidas restantes
+function obtenerVidasRestantes() {
+    return parseInt(localStorage.getItem('vidasRestantes'));
+}
+
 
 function iniciarJuego() {
-    introduccion();
+    mostrarMensajeBienvenida()
     solicitarNombre();
     alert("Vamos a resolver esta suma 5 + 5 = ?");
     elegirOpcionCorrecta("Ingrese la respuesta correcta", "10");
     mostrar();
     mostrarDos();
     mostrarOpciones();
+    guardarNombreJugador(nombre); 
+    guardarVidasRestantes(vidas); 
 }
 
 function mostrarAcertijo() {
@@ -116,13 +139,10 @@ document.getElementById("btnPrincipal").addEventListener("click", function() {
     iniciarJuego();
 });
 
+console.log(nombre, obtenerNombreJugador());
+console.log(vidas, obtenerVidasRestantes());
 
 
-//tabla de puntos localstorage setItem / getItem 
-
-// sessionStorage.setItem("array", [1,2,3]);
-// let array = sessionStorage.getItem("array");
-// console.log(array)
 
 
 

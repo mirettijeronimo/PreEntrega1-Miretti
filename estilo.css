@@ -13,8 +13,9 @@ body {
 /* Página principal (INDEX) */
 
 .bodyUno {
-  background: url("./imagenes/mario-fondo.jpg") no-repeat;
-  background-size: cover;
+  background: url("./imagenes/fondo-index.jpeg") no-repeat;
+  background-size: 100%;
+  background-size: 2000px 900px;
 }
 h1 {
   font-size: 90px;
@@ -55,18 +56,12 @@ a{
 }
 
 
-/* Página del juego (PAGES UNO) */
-.bodyDos {
-  background: url("./imagenes/mario-fondo-2.jpg") no-repeat;
-  background-size: cover;
-}
-
 #vidasRestantes {
   position: absolute;
   left: 5%;
-  top: -45%;
+  top: 20%;
   display: block;
-  margin-top: 450px;
+  margin-top: 600px;
   width: 100px;
   aspect-ratio: 1;
   background: linear-gradient(#dc1818 0 0) bottom/100% 0% no-repeat #ccc;
@@ -279,4 +274,46 @@ input label {
   
 }
 
- 
+/*maquina de escribir*/
+ .bodyPage2 {
+  background: url("./imagenes/fondo-pages1.jpeg") no-repeat;
+  background-size: cover;
+  background-size: 100%;
+  background-size: 2000px 1000px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  
+ }
+ .maquinaEscribir {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 2rem;
+  margin: 0 auto;
+  font-family: "Courier New";
+  
+  animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+  font-size: 30px;
+  font-weight: 900;
+  color: #e0d6e9;
+  text-shadow: 2px 2px 0px #957dad,
+               4px 4px 0px #ee4b2b,
+               6px 6px 0px #00c2cb,
+               8px 8px 0px #ff7f50,
+               10px 10px 0px #553c9a;
+  text-align: center;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
